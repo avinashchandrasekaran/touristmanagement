@@ -1,0 +1,80 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+<nav class="navbar bg-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <br>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <br>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/serach">Search & Delete</a>
+      </li>
+    </ul>
+  </nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req"> </span> First Name <small></small> </label>
+                        <input required type="text" [(ngModel)]="user.firstName" name="name" id="name"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name"><span class="req"> </span> Last Name <small></small> </label>
+                        <input required type="text" [(ngModel)]="user.lastName" name="name" id="name"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age"><span class="req"></span> gender </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.gender" name="email" id="txt" required
+                            placeholder="Enter your age" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender"><span class="req"></span> age </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.age" name="gender" id="txt"
+                            placeholder="Enter your gender" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mark"><span class="req"> </span> fromPlace </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.fromPlace" name="mark"
+                            id="mark" placeholder="Enter number of days" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mark"><span class="req"> </span> No of Days </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.noOfDays" name="mark"
+                            id="mark" placeholder="Enter your place" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+
